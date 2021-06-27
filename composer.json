@@ -16,7 +16,8 @@
         "jenssegers/date": "^4.0",
         "laracasts/flash": "^3.2",
         "laravel/framework": "^7.29",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "laravel/ui": "^2.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
