@@ -20,3 +20,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'admin'], function() {
+
+    # Login Page
+    Route::get('/login', 'Admin\AdminLoginController@login')->name('admin.login');
+
+    # Login POST Page
+    Route::post('/login', 'Admin\AdminLoginController@loginForm')->name('admin.login.submit');
+
+    # Admin Dashboard
+    Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
+
+    # Admin Logout
+    Route::post('/logout', 'Admin\AdminController@logout')->name('admin.logout');
+
+});

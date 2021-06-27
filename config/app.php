@@ -164,6 +164,7 @@ return [
         Jenssegers\Date\DateServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
+        
 
 
 
