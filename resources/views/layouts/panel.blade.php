@@ -214,7 +214,7 @@
             <!--begin::Entry-->
             <div class="d-flex flex-column-fluid">
 			
-			içerik gelecek
+			 @yield('content')
              
             </div>
             <!--end::Entry-->
@@ -263,7 +263,7 @@
             <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">{{ Auth::user()->name }} </a>
             <div class="text-muted mt-1">Yetki Gelecek</div>
             <div class="navi mt-2">
-              <a href="logout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
+              <a href="{{ Auth::logout() }}" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
             </div>
           </div>
           @endif

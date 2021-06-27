@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/PortfoyGiris', 'Pages\Portfoy\PortfoyGirisController@index')->name('pages.portfoy.PortfoyGiris');
 
 Route::group(['prefix' => 'admin'], function() {
 
