@@ -17,7 +17,6 @@
     <link href="{{asset('/assets/plugins/global/plugins.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('/assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('/assets/css/style.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('/assets/css/style.child.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <link href="{{asset('/assets/css/themes/layout/header/base/light.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
@@ -26,6 +25,7 @@
     <link href="{{asset('/assets/css/themes/layout/aside/dark.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="/assets/media/logos/favicon.ico" />
+    @yield('style')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
@@ -200,7 +200,7 @@
                   <!--begin::Page Heading-->
                   <div class="d-flex align-items-baseline flex-wrap mr-5">
                     <!--begin::Page Title-->
-                    <h5 class="text-dark font-weight-bold my-1 mr-5">Gösterge Paneli </h5>
+                    <h5 class="text-dark font-weight-bold my-1 mr-5">EMLAK PORTFÖY</h5>
                     <!--end::Page Title-->
                     <!--begin::Breadcrumb-->
                     <!--end::Breadcrumb-->
@@ -263,10 +263,13 @@
             <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">{{ Auth::user()->name }} </a>
             <div class="text-muted mt-1">Yetki Gelecek</div>
             <div class="navi mt-2">
-              <a href="{{ Auth::logout() }}" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
+              <a href="javascript:void" onclick="$('#logout-form').submit();" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
             </div>
           </div>
           @endif
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+             @csrf
+          </form>
         </div>
         <!--end::Header-->
         <!--begin::Separator-->
@@ -406,6 +409,7 @@
     <script src="/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5"></script>
     <script src="/assets/js/pages/widgets.js?v=7.0.5"></script>
     <script src="/assets/js/pages/crud/forms/widgets/select2.js?v=7.0.5"></script>
-	<script src="/assets/js/pages/features/miscellaneous/toastr.js?v=7.0.5"></script>
+	  <script src="/assets/js/pages/features/miscellaneous/toastr.js?v=7.0.5"></script>
+    @yield('script')
   </body>
 </html>

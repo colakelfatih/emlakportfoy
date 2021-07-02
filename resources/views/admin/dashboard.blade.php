@@ -263,10 +263,13 @@
             <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">{{ Auth::user()->name }} </a>
             <div class="text-muted mt-1">Yetki Gelecek</div>
             <div class="navi mt-2">
-              <a href="logout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
+              <a href="javascript:void" onclick="$('#logout-form').submit();" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Çıkış Yap</a>
             </div>
           </div>
           @endif
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
         </div>
         <!--end::Header-->
         <!--begin::Separator-->
