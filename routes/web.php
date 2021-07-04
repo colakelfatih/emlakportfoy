@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/PortfoyGiris', 'Pages\Portfoy\PortfoyGirisController@create')->name('pages.portfoy.PortfoyGiris');
+Route::get('/Portfoyler', 'Pages\Portfoy\PortfoyGirisController@index')->name('pages.portfoy.Portfoyler');
 Route::post('/PortfoyGiris', 'Pages\Portfoy\PortfoyGirisController@store')->name('pages.portfoy.PortfoyGiris.store');
 Route::get('/home', 'HomeController@index')->name('home');
 

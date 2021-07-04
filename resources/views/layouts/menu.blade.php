@@ -21,7 +21,7 @@
                   </a>
                 </li>
                 <li class="menu-item" aria-haspopup="true">
-                  <a href="araclar" class="menu-link">
+                  <a href="{{ route('pages.portfoy.Portfoyler') }}" class="menu-link">
                   <i class="menu-icon flaticon-layers"></i>
                   <span class="menu-text">Portföy Görüntüle </span>
                   </a>
@@ -31,21 +31,27 @@
                   <i class="menu-icon ki ki-bold-more-hor icon-md"></i>
                 </li>
                 <li class="menu-item" aria-haspopup="true">
-                  <a href="personelGosterge" class="menu-link">
+                  <a href="#" class="menu-link">
                   <i class="menu-icon flaticon-graphic-2"></i>
                   <span class="menu-text">Sözleşmeler </span>
                   </a>
                 </li>
 				 <li class="menu-item" aria-haspopup="true">
-                  <a href="plakaEkle" class="menu-link">
+                  <a href="#" class="menu-link">
                   <i class="menu-icon flaticon-add-circular-button"></i>
                   <span class="menu-text">Müşteriler </span>
                   </a>
                 </li>
 				<li class="menu-item" aria-haspopup="true">
-                  <a href="plakaDuzenle" class="menu-link">
+                  <a href="#" class="menu-link">
                   <i class="menu-icon flaticon-edit"></i>
                   <span class="menu-text">Müşteri Takipleri </span>
+                  </a>
+                </li>
+                <li class="menu-item" aria-haspopup="true">
+                  <a href="#" class="menu-link">
+                  <i class="menu-icon flaticon-edit"></i>
+                  <span class="menu-text">Takvim </span>
                   </a>
                 </li>
               </ul>
